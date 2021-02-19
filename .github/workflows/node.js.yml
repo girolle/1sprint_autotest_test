@@ -28,8 +28,5 @@ jobs:
     - run: echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa"
     - run: chmod 600 ~/.ssh/id_rsa
 
-    - run: git clone git@github.com:girolle/autotest.git
-    - run: ls -la
-    - run: echo "hello"
-   # - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
-   # - run: sh autotest.sh
+    - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
+    - run: sh autotest.sh
