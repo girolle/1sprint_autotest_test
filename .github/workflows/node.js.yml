@@ -26,7 +26,8 @@ jobs:
     - run: set -eu
     - run: mkdir $HOME/.ssh
     - run: echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa"
-    - run: cat "$HOME/.ssh/id_rsa"
     - run: chmod 600 ~/.ssh/id_rsa
 
     - run: sh .github/workflows/test.sh
+    - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
+    - run: sh autotest.sh
