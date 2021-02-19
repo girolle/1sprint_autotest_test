@@ -1,4 +1,2 @@
-cd ..
-git clone https://github.com/girolle/1sprint_test
-ls -la
+git clone https://github.com/girolle/autotest
 echo "hello"
