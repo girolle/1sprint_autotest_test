@@ -27,4 +27,5 @@ jobs:
     - run: mkdir $HOME/.ssh
     - run: echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa" && chmod 600 ~/.ssh
     - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
+    
     - run: sh autotest.sh
