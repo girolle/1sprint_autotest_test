@@ -23,4 +23,4 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: git clone https://github.com/girolle/ci_cd_test/ && ls -la
+    - run: sh .github/workflows/test.sh
