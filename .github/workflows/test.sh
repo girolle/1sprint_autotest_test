@@ -1,32 +1,6 @@
 mkdir ~/.ssh
-touch ~/.ssh/id_rsa && echo "-----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEAwMC4E/NUdd++tqzI0SEfrsQsCT0yr7bC+OvUfvyJxFFCofmC
-Bagnna1GU4zOot3lGqL4ppYqxGufDV2RODxDNimTEEwgl1UETJ+l64b8y1wzQgdi
-t03jvDlyIJG5Hyvx+NRUdwY7DVYRWBZf69m+bU97Z4yE3uMJyUtgHFL4MMgLGRpa
-Hfw4Uiwp7xpkGxQUreC7cYozuzvthHiR1YNmmLX5uLoXaF3+fAHWKZ7OLOA5vT0r
-rZ93gsmJQNAVoqQ+gza+zHwdgEjR5hv/jHoVUbzLTQxCUfbGjWDB8LkgfvDcoJ08
-bCCbC9mGg5gfdvGS6WihGkDoz9ViHgBn8kkIBQIDAQABAoIBADAFExbtTQJcrn+G
-BjWLggAhITNgCquZ5XLsFbFZKt08vVPq/Ah6vvvaOiYAc05B55y+MyIVUSxD/4jt
-4YrYAIqSyu+Jd6kb5glM0KIfrAThwGdXvbEa93xh91vD0hHA+fRauXw5kiadZY7D
-bDwur/E9lunSKRv6BesfGx+TT/+et0op0FSDkXXvKZBjzyJVmBCGago3niWEs8nW
-lcfEU92QNWlcIqY6u9a+9ckxlV4D8atqoIpaCiUivmgl6Gu2dUb6uBrdH5xOuL/z
-ci4jE4q136W6AR1BGF90c1s6aUU10Z8TsKRWLrxqUQanScsyg5z1fxkBjv8GwCVy
-p93O2eECgYEA92KWD4x4z9WTctiYggpPfbFu0acWPEjr7VO/UCpu9kUDyD7e6uWE
-4kj1gFolxULjEPuOIrzECGK4RkYTqf3Pm4Z0QtF4xkaGPNBuV1VGk8zpykaYxfWz
-w44aVqcuC6VBFS7pi/lqoOpBmK34+FPaenSYE9uiyDLhSSfyMRc7a80CgYEAx3cX
-Y5p/0WQEVPDi4lx1FpWcaWGP6uKUmA3QrAxqsp8tHw8t+jiZczqj5qvf2j4GwpE6
-sX8Pw767A/8TBoBEjrTyinGQApytWfJRYYHlAOMdUcf5PB4Cuz0qPvNXPK6tHb77
-RVMynNgeR7nNHklD3RYLtbSknmKhKmjNM7JihRkCgYEA5e5CzWbhr0KyTm9UqKFO
-quPsvX5QY23fovFRAwC9q7YPwuH0rVzwuqXXURn4uzTk+Zbl0BGlHqoq3l4pzrky
-ajp4+tXZLGjGQeX0eMWw2JT/w1sEihJJp/v/LQUr/fT13euBdPE4kyHIIFGq85x0
-l5ag9uwQi4UG8cjoCYqvVw0CgYBVSt99f/tYFmSjzb22/cIzvhX8GfPohKr1ujKY
-31ZguyAYP+1xKfK0C0c6xBQcxpktadynOaYMFerycog4J3EpdMah3J2wAD9ATxXt
-lBXQo01OQyyYQFz6o9UExhlvoWH1bk0T/9eMqf2IvjKv2LRkPaEUOgKKl7JC6D2W
-9ZibQQKBgE3MUS5xa8do4zEIsVulkBehAhG6BjL3cakLMA/yxH/yno6AuLSDEX7l
-Ak4vUW+18HWHvt1WiTz9/woYb5fU7nlzl63EmDV6psp422XNqeBqzn4YTWi7+9Zg
-vKexvLapKTq39tp7Io6/VEl2PqOIQChMo3WznG0hcJCc1KEP+Fms
------END RSA PRIVATE KEY-----
-" > ~/.ssh/id_rsa
+echo "${{ secrets.key }}" > ~/.ssh/id_rsa
+chmod 600 ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa
 git clone git@github.com:girolle/autotest.git
 echo "hello"
