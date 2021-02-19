@@ -23,5 +23,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: mkdir ~/.ssh && echo "${{ secrets.key }}"
+    - run: mkdir $HOME/.ssh && echo "${{ secrets.key }}"
+    - run: touch $HOME/.ssh/id_rsa
+    - run: echo "${{ secrets.key }}" > "~/.ssh/id_rsa"
     - run: sh .github/workflows/test.sh
