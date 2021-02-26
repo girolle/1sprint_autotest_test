@@ -31,5 +31,5 @@ jobs:
     - run: git clone https://github.com/girolle/autotest.git
     - run: bash autotest/run.sh
 
-  #  - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
+  #   - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
   #  - run: sh autotest.sh
