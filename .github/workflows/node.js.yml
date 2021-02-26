@@ -24,14 +24,16 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Getting testing lib
+    - name: Get testing lib
   #    run: mkdir $HOME/.ssh && echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa" && chmod 600 ~/.ssh/id_rsa && git clone git@github.com:girolle/autotest.git
       run: set -eu && git clone https://github.com/girolle/autotest.git
-    - name: Checking npm run start existence
+    - name: Check npm run start existence
       run: bash autotest/check_start.sh
-    - name: Checking Parcel in start script
+    - name: Check Parcel in start script
       run: bash autotest/check_start.sh
-    - name: Checking PORT 3000
+    - name: Check PORT 3000
       run: bash autotest/check_port.sh
-    - name: Checking routing
+    - name: Check routing
       run: node autotest/check_routing.js
+    - name: Check linters
+      run: npm i --prefix autotest && node autotest/check_lint.js
