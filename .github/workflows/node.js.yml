@@ -26,7 +26,8 @@ jobs:
     - name: Getting testing lib
   #    run: mkdir $HOME/.ssh && echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa" && chmod 600 ~/.ssh/id_rsa && git clone git@github.com:girolle/autotest.git
       run: set -eu && git clone https://github.com/girolle/autotest.git
-    - run: bash autotest/run.sh
+    - name: Checking PORT 3000
+      run: bash autotest/check_port.sh
 
   #   - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
   #  - run: sh autotest.sh
