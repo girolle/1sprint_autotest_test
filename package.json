@@ -6,7 +6,7 @@
     "lint:js": "eslint ./src/**/*.js",
     "lint:css": "stylelint ./src/**/*.css",
     "lint": "npm run lint:js && npm run lint:css",
-    "start": "parcel src/index.njk"
+    "start": "parcel src/index.njk --port .3000"
   },
   "engines": {
     "node": ">= 12.4.0"

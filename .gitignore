@@ -1,2 +1,4 @@
 autotest.sh
 node_modules
+.cashe
+dist
