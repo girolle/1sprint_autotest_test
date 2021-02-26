@@ -32,6 +32,5 @@ jobs:
       run: bash autotest/check_start.sh
     - name: Checking PORT 3000
       run: bash autotest/check_port.sh
-
-  #   - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
-  #  - run: sh autotest.sh
+    - name: Check routing
+      run: node autotest/check_routing.js
