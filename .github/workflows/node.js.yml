@@ -27,7 +27,7 @@ jobs:
     - run: mkdir $HOME/.ssh
     - run: echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa"
     - run: chmod 600 ~/.ssh/id_rsa
-    - run: ssh://git@bb.yandex-team.ru/~girolle/test-lib-2floor.git
+    - run: git clone ssh://git@bb.yandex-team.ru/~girolle/test-lib-2floor.git
     - run: bash test-lib-2floor/run.sh
 
   #  - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
