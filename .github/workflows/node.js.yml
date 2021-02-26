@@ -33,5 +33,5 @@ jobs:
       run: bash autotest/check_start.sh
     - name: Checking PORT 3000
       run: bash autotest/check_port.sh
-    - name: Check routing
+    - name: Checking routing
       run: node autotest/check_routing.js
