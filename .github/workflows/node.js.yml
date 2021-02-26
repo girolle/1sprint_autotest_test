@@ -23,12 +23,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: set -eu
-    - run: mkdir $HOME/.ssh
-    - run: echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa"
-    - run: chmod 600 ~/.ssh/id_rsa
-  #  - run: git clone git@github.com:girolle/autotest.git
-    - run: git clone https://github.com/girolle/autotest.git
+      run: set -eu &&
+    - name: Getting tisting lib
+  #    run: mkdir $HOME/.ssh && echo "${{ secrets.key }}" > "$HOME/.ssh/id_rsa" && chmod 600 ~/.ssh/id_rsa && git clone git@github.com:girolle/autotest.git
+      run: git clone https://github.com/girolle/autotest.git
     - run: bash autotest/run.sh
 
   #   - run: echo "${{ secrets.autotest_script }}" > "autotest.sh"
