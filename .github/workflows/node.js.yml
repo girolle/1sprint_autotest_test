@@ -36,4 +36,4 @@ jobs:
     - name: Check routing
       run: node autotest/check_routing.js
     - name: Check linters
-      run: npm i --prefix autotest && node autotest/check_lint.js
+      run: npm -s i --prefix autotest && node autotest/check_lint.js
